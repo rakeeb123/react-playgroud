@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1996,53 +1996,59 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/about.js":
-/*!************************!*\
-  !*** ./pages/about.js ***!
-  \************************/
+/***/ "./pages/p/[id].js":
+/*!*************************!*\
+  !*** ./pages/p/[id].js ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Post; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/header */ "./components/header.js");
-/* harmony import */ var _components_myLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/myLayout */ "./components/myLayout.js");
-var _jsxFileName = "/home/rakeeb/Code/Web/DropShare/pages/about.js";
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_myLayout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/myLayout */ "./components/myLayout.js");
+var _jsxFileName = "/home/rakeeb/Code/Web/DropShare/pages/p/[id].js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-function About() {
-  let content = __jsx(_components_myLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+function Post() {
+  const router = Object(next_router__WEBPACK_IMPORTED_MODULE_1__["useRouter"])();
+  return __jsx(_components_myLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: this
-  }, __jsx("p", {
+  }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: this
-  }, "This is the about page"));
-
-  return content;
+  }, router.query.id), __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, " This is the blog post content "));
 }
 
 /***/ }),
 
-/***/ 3:
-/*!******************************!*\
-  !*** multi ./pages/about.js ***!
-  \******************************/
+/***/ 5:
+/*!*******************************!*\
+  !*** multi ./pages/p/[id].js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rakeeb/Code/Web/DropShare/pages/about.js */"./pages/about.js");
+module.exports = __webpack_require__(/*! /home/rakeeb/Code/Web/DropShare/pages/p/[id].js */"./pages/p/[id].js");
 
 
 /***/ }),
@@ -2157,6 +2163,17 @@ module.exports = require("core-js/library/fn/weak-map");
 
 /***/ }),
 
+/***/ "next/router":
+/*!******************************!*\
+  !*** external "next/router" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "prop-types":
 /*!*****************************!*\
   !*** external "prop-types" ***!
@@ -2213,4 +2230,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=about.js.map
+//# sourceMappingURL=[id].js.map

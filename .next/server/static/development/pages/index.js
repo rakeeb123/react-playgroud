@@ -2015,67 +2015,79 @@ var _jsxFileName = "/home/rakeeb/Code/Web/DropShare/pages/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
+ // Dynamic routing with router post and title queries
 
+/*
+const PostLink = props => (
+	<li>
+		<Link href={`/post?title=${props.title}`}>
+			<a>{props.title}</a>
+		</Link>
+	</li>
+);
+*/
+// Dynamic routing with router id queries
 
 const PostLink = props => __jsx("li", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 5
+    lineNumber: 17
   },
   __self: undefined
 }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-  href: `/post?title=${props.title}`,
+  href: "/p/[id]",
+  as: `/p/${props.id}`,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 6
+    lineNumber: 18
   },
   __self: undefined
 }, __jsx("a", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 7
+    lineNumber: 19
   },
   __self: undefined
-}, props.title)));
+}, props.id)));
 
 function Blog() {
   return __jsx(_components_myLayout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 27
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 28
     },
     __self: this
   }, "My Blog"), __jsx("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 29
     },
     __self: this
   }, __jsx(PostLink, {
-    title: "Hello Next.js",
+    id: "Hello Next.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 30
     },
     __self: this
   }), __jsx(PostLink, {
-    title: "Learn Next.js is awesome",
+    id: "Learn Next.js is awesome",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 31
     },
     __self: this
   }), __jsx(PostLink, {
-    title: "Deploy apps with Zeit",
+    id: "Deploy apps with Zeit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 32
     },
     __self: this
   })));
