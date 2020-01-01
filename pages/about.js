@@ -1,8 +1,11 @@
+import Header from '../components/header';
+import Layout from '../components/myLayout'
+
 export default function About() {
 	let content = (
-		<div>
+		<Layout>
 			<p>This is the about page</p>
-		</div>
+		</Layout>
 	)
 
 	return content
